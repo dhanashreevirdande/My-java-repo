@@ -1,3 +1,4 @@
+//half pyramid pattern
 import java.util.*;
 public class Pathalfpyr{
     public static void main(String args[]){
