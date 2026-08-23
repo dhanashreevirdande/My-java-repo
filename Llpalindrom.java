@@ -11,7 +11,6 @@ public class Llpalindrom {
             this.next = null;
         }
     }
-
 public static ListNode reverse(ListNode head){
     ListNode prev=null;
     ListNode curr=head;
