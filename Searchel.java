@@ -1,3 +1,4 @@
+//searching element 
 import java.util.*;
 public class Searchel{
 public static void main(System args[]){
