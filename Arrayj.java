@@ -8,9 +8,8 @@ public class Arrayj{
             num[i]=sc.nextInt();
         }
         for(int i=0;i<num.length;i++){
-            System.out.println(num[i]+" ");
+            System.out.println(num[i]+"  ");
         }
     }
-   
     
 }
