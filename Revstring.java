@@ -1,4 +1,4 @@
-//Revesing String
+//Revesing String injava
 import java.util.*;
 public class Revstring{
     public static void main(String args[]){
