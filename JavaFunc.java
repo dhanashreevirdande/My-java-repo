@@ -1,3 +1,4 @@
+// java function
 import java.util.*;
 public class JavaFunc{
 public static void printname(String name){
