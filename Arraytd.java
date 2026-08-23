@@ -17,5 +17,5 @@ public class Arraytd{
 }      
 System.out.println();
   }
-    }
+}
 }
