@@ -1,4 +1,4 @@
-//concatenating string
+//concatenating strings in java
 import java.util.*;
 public class Jstrins{
     public static void main(String args[]){
