@@ -8,6 +8,7 @@ public class Patsolidsquare{
     public static void main(String args[]){
         int n=4;
         int m=5;
+        System.out.println("Solid square pattern");
         //outer loop /rows
         for(int i =1;i<=n;i++){
             //inner loop /cols
