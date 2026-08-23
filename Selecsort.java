@@ -1,3 +1,4 @@
+//selection sort
 import java.util.*;
 public class Selecsort{
     public static void printarr(int arr[]){
