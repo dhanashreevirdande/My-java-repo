@@ -1,3 +1,4 @@
+//Functions in java
 import java.util.*;
 public class Funsum{
 public static int add(int a,int b)
