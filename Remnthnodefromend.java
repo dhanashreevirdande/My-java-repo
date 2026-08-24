@@ -1,37 +1,5 @@
-// find nth node from last of ll
-//in java
-/*public ListNode removeNthFromEnd(ListNode head, int n) {
-    if (head == null || head.next == null) {
-        return null;
-    }
-
-    int size = 0;
-    ListNode current = head;
-
-    while (current != null) {
-        current = current.next;
-        size++;
-    }
-
-    if (n == size) {
-        return head.next;
-    }
-
-    int indexToSearch = size - n;
-    ListNode prev = head;
-    int i = 1;
-
-    while (i < indexToSearch) {
-        prev = prev.next;
-        i++;
-    }
-
-    prev.next = prev.next.next;
-
-    return head;
-}
-*/
 import java.util.*;
+
 public class Remnthnodefromend {
 
     static class ListNode {
@@ -46,44 +14,34 @@ public class Remnthnodefromend {
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {
 
-        // If list is empty or has only one node
-        if (head == null || head.next == null) {
-            return null;
+        // Create dummy node
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+
+        // Two pointers
+        ListNode slow = dummy;
+        ListNode fast = dummy;
+
+        // Move fast n + 1 steps
+        for (int i = 0; i <= n; i++) {
+            fast = fast.next;
         }
 
-        // Find the size of the linked list
-        int size = 0;
-        ListNode current = head;
-
-        while (current != null) {
-            current = current.next;
-            size++;
+        // Move both pointers
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
         }
 
-        // If removing the first node
-        if (n == size) {
-            return head.next;
-        }
+        // Remove nth node from end
+        slow.next = slow.next.next;
 
-        // Find the node before the node to be removed
-        int indexToSearch = size - n;
-
-        ListNode prev = head;
-        int i = 1;
-
-        while (i < indexToSearch) {
-            prev = prev.next;
-            i++;
-        }
-
-        // Remove the nth node from the end
-        prev.next = prev.next.next;
-
-        return head;
-
+        return dummy.next;
     }
+
     public static void display(ListNode head) {
         ListNode current = head;
+
         while (current != null) {
             System.out.print(current.data + " -> ");
             current = current.next;
@@ -91,9 +49,9 @@ public class Remnthnodefromend {
 
         System.out.println("null");
     }
-       public static void main(String[] args) {
 
-        // Create linked list
+    public static void main(String[] args) {
+
         ListNode head = new ListNode(10);
         head.next = new ListNode(20);
         head.next.next = new ListNode(30);
@@ -103,7 +61,6 @@ public class Remnthnodefromend {
         System.out.println("Original Linked List:");
         display(head);
 
-        // Remove 2nd node from the end
         head = removeNthFromEnd(head, 2);
 
         System.out.println("After removing 2nd node from end:");
